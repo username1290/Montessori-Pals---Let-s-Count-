@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CountUpward</name>
+    <events>
+        <include>CODESHEET</include>
+        <comment>RANGE is the number of pixels to move objects so they don&apos;t overlap</comment>
+        <variable constant="1" name="RANGE" sid="5065933282300574" static="0" type="number">200</variable>
+        <variable constant="0" name="INITIALIZATION" sid="8547689026702377" static="0" type="text">true</variable>
+        <comment>Particle coordinates</comment>
+        <comment>This stores the order in which the sound is played. Example: First Click = ArraySound00, Second click = ArraySound01</comment>
+        <variable constant="0" name="varPlaySoundArrayCounter" sid="4386912952344094" static="0" type="number">0</variable>
+        <comment>Preload sounds, and take off screen particles, we will spawn them later (only when I click item)</comment>
+        <comment>Set Array position to Audio name (And there&apos;s NO need to put extension!)</comment>
+        <event-block sid="4394570181987012">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7231831851993667" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-group description="" sid="1324471741642941" title="GROUP-ONSTART-esCountUpward">
+                    <sub-events>
+                        <event-group description="" sid="4467403945204908" title="Group - Array of Numbers Audio and Preload">
+                            <sub-events>
+                                <event-block sid="8816357779682291">
+                                    <conditions />
+                                    <actions>
+                                        <action id="2" name="Set at X" sid="1027206605712442" type="ArraySoundActivityCountUp1to9">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Value">&quot;NUM0126JILL&quot;</param>
+                                        </action>
+                                        <action id="2" name="Set at X" sid="4112733846552675" type="ArraySoundActivityCountUp1to9">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Value">&quot;NUM0227JILL&quot;</param>
+                                        </action>
+                                        <action id="2" name="Set at X" sid="5987047526529008" type="ArraySoundActivityCountUp1to9">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Value">&quot;NUM0328JILL&quot;</param>
+                                        </action>
+                                        <action id="2" name="Set at X" sid="8528784290020707" type="ArraySoundActivityCountUp1to9">
+                                            <param id="0" name="X">3</param>
+                                            <param id="1" name="Value">&quot;NUM0429JILL&quot;</param>
+                                        </action>
+                                        <action id="2" name="Set at X" sid="5395896374021289" type="ArraySoundActivityCountUp1to9">
+                                            <param id="0" name="X">4</param>
+                                            <param id="1" name="Value">&quot;NUM0530JILL&quot;</param>
+                                        </action>
+                                        <action id="2" name="Set at X" sid="3310628183454968" type="ArraySoundActivityCountUp1to9">
+                                            <param id="0" name="X">5</param>
+                                            <param id="1" name="Value">&quot;NUM0631JILL&quot;</param>
+                                        </action>
+                                        <action id="2" name="Set at X" sid="7480142623076155" type="ArraySoundActivityCountUp1to9">
+                                            <param id="0" name="X">6</param>
+                                            <param id="1" name="Value">&quot;NUM0732JILL&quot;</param>
+                                        </action>
+                                        <action id="2" name="Set at X" sid="4666834580501349" type="ArraySoundActivityCountUp1to9">
+                                            <param id="0" name="X">7</param>
+                                            <param id="1" name="Value">&quot;NUM0833JILL&quot;</param>
+                                        </action>
+                                        <action id="2" name="Set at X" sid="6758148469358059" type="ArraySoundActivityCountUp1to9">
+                                            <param id="0" name="X">8</param>
+                                            <param id="1" name="Value">&quot;NUM0934JILL&quot;</param>
+                                        </action>
+                                        <action id="4" name="Preload" sid="8181792837440313" type="Audio">
+                                            <param id="0" name="Audio file">NUM0126JILL</param>
+                                        </action>
+                                        <action id="4" name="Preload" sid="7687470583348581" type="Audio">
+                                            <param id="0" name="Audio file">NUM0227JILL</param>
+                                        </action>
+                                        <action id="4" name="Preload" sid="5555390278719856" type="Audio">
+                                            <param id="0" name="Audio file">NUM0328JILL</param>
+                                        </action>
+                                        <action id="4" name="Preload" sid="4049242126844547" type="Audio">
+                                            <param id="0" name="Audio file">NUM0429JILL</param>
+                                        </action>
+                                        <action id="4" name="Preload" sid="1676569490345823" type="Audio">
+                                            <param id="0" name="Audio file">NUM0530JILL</param>
+                                        </action>
+                                        <action id="4" name="Preload" sid="644400983557688" type="Audio">
+                                            <param id="0" name="Audio file">NUM0631JILL</param>
+                                        </action>
+                                        <action id="4" name="Preload" sid="6941588380508216" type="Audio">
+                                            <param id="0" name="Audio file">NUM0732JILL</param>
+                                        </action>
+                                        <action id="4" name="Preload" sid="3106955961413205" type="Audio">
+                                            <param id="0" name="Audio file">NUM0833JILL</param>
+                                        </action>
+                                        <action id="4" name="Preload" sid="6638053335137639" type="Audio">
+                                            <param id="0" name="Audio file">NUM0934JILL</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-block sid="349848898373056">
+                            <conditions />
+                            <actions>
+                                <action id="2" name="Stop" sid="1409427556972818" type="numbersImages" />
+                                <action id="-9" name="Set value" sid="5935789726612983" type="System">
+                                    <param id="0" name="Variable">varPlaySoundArrayCounter</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action disabled="1" id="-21" name="Reset global variables" sid="3664949086214943" type="System" />
+                                <action id="-9" name="Set value" sid="997379167679016" type="System">
+                                    <param id="0" name="Variable">varWhatFrameToShow</param>
+                                    <param id="1" name="Value">int(random(SpriteToClick.AnimationFrameCount))</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="9254365984090988" type="System">
+                                    <param id="0" name="Variable">varWhatAnimationToShow</param>
+                                    <param id="1" name="Value">(arrayRandomAnimation.At(int(random(0,2))))</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3346814415817166" type="System">
+                                    <param id="0" name="Variable">varHowManyItemsToCreate</param>
+                                    <param id="1" name="Value">(floor(random(1, 10.1)))</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5913836847299197" type="System">
+                                    <param id="0" name="Variable">varItemsCreatedFPSinfo</param>
+                                    <param id="1" name="Value">varHowManyItemsToCreate</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5309557678034193" type="System">
+                                    <param id="0" name="Variable">varCountHowManyItemsLeft</param>
+                                    <param id="1" name="Value">varHowManyItemsToCreate</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4640528122335261" type="System">
+                                    <param id="0" name="Variable">INITIALIZATION</param>
+                                    <param id="1" name="Value">&quot;true&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="1424040315918906" title="Group Create Sprites">
+                    <sub-events>
+                        <event-block sid="3491352729981397">
+                            <conditions>
+                                <condition id="-23" name="While" sid="9476760462146836" type="System" />
+                                <condition id="-8" name="Compare two values" sid="1005147896986104" type="System">
+                                    <param id="0" name="First value">varHowManyItemsToCreate</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>This is the LOOP that creates the RANDOM number of items onscreen</comment>
+                                <variable constant="0" name="VariableX" sid="2605663320300422" static="0" type="number">0</variable>
+                                <variable constant="0" name="VariableY" sid="2903455680617278" static="0" type="number">0</variable>
+                                <event-block sid="9301308839361109">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="6790581072110014" type="System">
+                                            <param id="0" name="Variable">VariableX</param>
+                                            <param id="1" name="Value">(floor(random(150, 890)))</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="3621660569148206" type="System">
+                                            <param id="0" name="Variable">VariableY</param>
+                                            <param id="1" name="Value">(floor(random(270, 640)))</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="7645265396237002" type="System">
+                                            <param id="0" name="Object to create">SpriteToClick</param>
+                                            <param id="1" name="Layer">&quot;GUI&quot;</param>
+                                            <param id="2" name="X">VariableX</param>
+                                            <param id="3" name="Y">VariableY</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="4761403746250467" type="SpriteToClick">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Value">varHowManyItemsToCreate</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="856027317290528" type="System">
+                                            <param id="0" name="Variable">varHowManyItemsToCreate</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="9684444265968888">
+                    <conditions />
+                    <actions>
+                        <action id="-12" name="Set group active" sid="1086612675937029" type="System">
+                            <param id="0" name="Group name">&quot;GROUP-SET-SHAPE&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" disabled="1" inactive="1" sid="8827883989420319" title="Group Move objects if overlapping">
+            <sub-events>
+                <event-block disabled="1" sid="8561264079605846">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="520327602063279" type="System">
+                            <param id="0" name="Variable">INITIALIZATION</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;true&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="1837473760675343">
+                            <conditions>
+                                <condition id="-23" name="While" sid="9655140402190502" type="System" />
+                                <condition id="1" name="Is overlapping another object" sid="3100446590454397" type="SpriteToClick">
+                                    <param id="0" name="Object">SpriteToClick</param>
+                                </condition>
+                                <condition id="-13" name="Pick nth instance" sid="6857311637607218" type="System">
+                                    <param id="0" name="Object">SpriteToClick</param>
+                                    <param id="1" name="Instance">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="1396560361397962" type="SpriteToClick">
+                                    <param id="0" name="X">scrollX+random(-RANGE,RANGE)</param>
+                                    <param id="1" name="Y">scrolly+random(-RANGE,RANGE)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="9589904717704862">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="1607935367162601" type="System">
+                                    <param id="0" name="Variable">INITIALIZATION</param>
+                                    <param id="1" name="Value">&quot;done&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6059467893132826" title="Group Play sounds on clicked">
+            <sub-events>
+                <comment>This script PLAYS the NUMBER SOUNDFILE of clicked object, add 1 to the variable that stores the filenames, so it will play the NEXT file in the array!&#x0D;&#x0A;ParticleX and ParticleY are used to transfer Sprite position as parameters, for FUNCTION to included codeSheet&#x0D;&#x0A;Show particles when clicking object. Remember to put all effects on its own single layer (for efficiency).</comment>
+                <event-block sid="3231006902031401">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="6579038919521623" type="Touch">
+                            <param id="0" name="Object">SpriteToClick</param>
+                        </condition>
+                        <condition id="-17" name="Pick top/bottom" sid="3348203187482461" type="SpriteToClick">
+                            <param id="0" name="Which">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Play (by name)" sid="3935610136053411" type="Audio">
+                            <param id="0" name="Folder">0</param>
+                            <param id="1" name="Audio file name">ArraySoundActivityCountUp1to9.At(varPlaySoundArrayCounter)</param>
+                            <param id="3" name="Loop">0</param>
+                            <param id="4" name="Volume">0</param>
+                            <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8462489643637273" type="System">
+                            <param id="0" name="Variable">ParticleX</param>
+                            <param id="1" name="Value">SpriteToClick.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7196998335184951" type="System">
+                            <param id="0" name="Variable">ParticleY</param>
+                            <param id="1" name="Value">SpriteToClick.Y</param>
+                        </action>
+                        <action id="0" name="Call function" sid="4119167649436826" type="Function">
+                            <param id="0" name="Name">&quot;functionCreateParticlesOnObjectCoordinatesWhenClicked&quot;</param>
+                            <param id="1" name="Parameter {n}">ParticleX{###}ParticleY</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="4634915822595463" type="SpriteToClick" />
+                        <action id="-10" name="Add to" sid="5930676646926691" type="System">
+                            <param id="0" name="Variable">varPlaySoundArrayCounter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="6766790409587534" type="System">
+                            <param id="0" name="Variable">varCountHowManyItemsLeft</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2349530477178315">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="9273705137689608" type="numbersImages">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Number">varPlaySoundArrayCounter</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="9927735961951497" type="numbersImages">
+                                    <param id="0" name="Frame number">varPlaySoundArrayCounter</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9510016054940734">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5532454356127094" type="System">
+                                    <param id="0" name="First value">varCountHowManyItemsLeft</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="6084212565992442" type="Function">
+                                    <param id="0" name="Name">&quot;functionEndGameAndContinuePlaying&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Set all elements to the same shape (random)" inactive="1" sid="3042033388970825" title="GROUP-SET-SHAPE">
+            <sub-events>
+                <event-block sid="2910502802874807">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="2280914574560266" type="System">
+                            <param id="0" name="Object">SpriteToClick</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="3104128506501485">
+                    <conditions />
+                    <actions>
+                        <action id="2" name="Stop" sid="3958841748443319" type="SpriteToClick" />
+                        <action id="-12" name="Set group active" sid="2248990485813602" type="System">
+                            <param id="0" name="Group name">&quot;GROUP-SET-SHAPE&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
